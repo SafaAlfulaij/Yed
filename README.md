@@ -11,3 +11,7 @@ Yed requires these libraries installed:
 
 ## Running
 You can run the application by executing: `python3 main.py`
+
+## Screenshots
+![Main window](https://raw.githubusercontent.com/SafaAlfulaij/Yed/master/screenshots/mainWindow.png)
+![Overview page](https://raw.githubusercontent.com/SafaAlfulaij/Yed/master/screenshots/overviewPage.png)
