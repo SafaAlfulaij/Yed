@@ -30,10 +30,6 @@ def getDistroName():
         except:
             return 'Other'
 
-internetConnectionManager = QNetworkConfigurationManager()
-def isThereInternetConnection():
-    return internetConnectionManager.isOnline()
-
 class InternetConnectionClass(QObject):
 
     ignore = pyqtSignal()
