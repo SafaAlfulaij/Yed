@@ -21,14 +21,14 @@ from PyQt5.QtNetwork import QNetworkConfigurationManager
 import subprocess, re
 
 def getDistroName():
-    p = subprocess.Popen('cat /etc/os-release', stdout=subprocess.PIPE, shell=True)
-    output = p.communicate()[0]
-
-    name = re.findall('^NAME=["\']?([^"\']*)["\']?', output.decode('UTF-8')[:-1])
-    try:
-        return name[0]
-    except:
-        return 'Other'
+    with open('/etc/os-release') as handle:
+        fileContent = handle.read()
+        
+        name = re.findall('^NAME=["\']?([^"\']*)["\']?', fileContent)
+        try:
+            return name[0]
+        except:
+            return 'Other'
 
 internetConnectionManager = QNetworkConfigurationManager()
 def isThereInternetConnection():
