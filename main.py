@@ -24,9 +24,10 @@ except ImportError:
     print('You need Python3 and PyQt5 (Python3 version) installed to run this app.') #TODO: Explain more
     sys.exit()
 
-from src import database, utils
-
 app = QApplication(sys.argv)
+
+from src import database, utils #HACK to init QApplication
+
 engine = QQmlApplicationEngine()
 
 qmlRegisterType(database.MainDatabase, 'DataBaseData', 1, 0, 'MainDatabase')
