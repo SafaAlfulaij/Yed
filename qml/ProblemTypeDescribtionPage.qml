@@ -116,6 +116,12 @@ Item {
                 anchors.leftMargin: 10
 
                 onLinkActivated: (link == "Yes") ? problemTypeDescribtionPage.parent.pop() : visible = false
+
+                MouseArea {
+                    anchors.fill: parent
+                    cursorShape: backConfirmationLabel.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                    acceptedButtons: Qt.NoButton
+                }
             }
 
             Text {

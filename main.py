@@ -21,7 +21,7 @@ try:
     from PyQt5.QtWidgets import QApplication
     from PyQt5.QtQml import QQmlApplicationEngine, qmlRegisterType
 except ImportError:
-    print('You need Python3 and PyQt5 (Python3 version) installed to run this app.') #TODO: Explain more
+    print('You need Qt5 (SQL, Quick and Quick Controls modules), Python3 and Python3-PyQt5 installed to run this app.')
     sys.exit()
 
 app = QApplication(sys.argv)
